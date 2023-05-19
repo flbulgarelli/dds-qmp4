@@ -1,4 +1,4 @@
-package ar.edu.utn.frba.dds.qmp4;
+package com.accuweather;
 
 import java.util.Map;
 
