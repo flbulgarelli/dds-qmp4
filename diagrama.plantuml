@@ -1,0 +1,29 @@
+@startuml
+allow_mixing
+
+interface ServicioMeteorologico {
+  obtenerCondicionesClimaticas(String direccion) : EstadoDelTiempo
+}
+
+class AsesorDeImagen {
+}
+
+interface AccuWeatherAPI {
+ getWeather(String location) : Map<String, Object>
+}
+
+AsesorDeImagen --> ServicioMeteorologico
+ServicioMeteorologico -.up-> EstadoDelTiempo
+ServicioMeteorologicoMock -up.-|> ServicioMeteorologico
+ServicioMeteorologicoTheWeatherChannel -up.|> ServicioMeteorologico
+ServicioMeteorologicoAccuWeather -up.|> ServicioMeteorologico
+ServicioMeteorologicoAccuWeather --> AccuWeatherAPI
+EstadoDelTiempo -left-> Humedad
+
+cloud "AccuWeather"
+
+AccuWeatherAPI --> AccuWeather
+
+
+hide empty members
+@enduml
