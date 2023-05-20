@@ -1,0 +1,20 @@
+name: Test Workflow
+
+on:
+  - push
+
+jobs:
+  build:
+    name: Correr tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+          java-package: jdk
+          architecture: x64
+      - name: Construir
+        run: mvn --batch-mode -DskipTests package
+      - name: Correr test
+        run: mvn --batch-mode  test
