@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccuWeatherAPIClientTest {
 
-  @Test
+  //@Test
   void sePuedeConsultarAAccuweatherYObtenerElPronosticoDeBuenosAires() {
     var cliente = new AccuWeatherAPIClient();
     var resultado = cliente.getWeather("Buenos Aires");

@@ -5,6 +5,9 @@ import java.util.List;
 public class AsesorDeImagen {
   private ServicioMeteorologico servicioMeteorologico;
 
+  public AsesorDeImagen(ServicioMeteorologico servicioMeteorologico) {
+    this.servicioMeteorologico = servicioMeteorologico;
+  }
 
   public Atuendo sugerirAtuendo(String direccion, Guardarropas guardarropas) {
     EstadoDelTiempo estadoDelTiempo = this.servicioMeteorologico.obtenerCondicionesClimaticas(direccion);
