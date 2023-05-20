@@ -1,5 +1,7 @@
 package ar.edu.utn.frba.dds.qmp4;
 
+import com.accuweather.AccuWeatherAPI;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.HashMap;
