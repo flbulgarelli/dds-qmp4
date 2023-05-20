@@ -11,7 +11,7 @@ class AsesorDeImagenTest {
   @Test
   void sePuedenGenerarAtuendosParaBuenosAiresCon18GradosY100PorcientoDeHumedad() {
     ServicioMeteorologico servicio = Mockito.mock(ServicioMeteorologico.class);
-    
+
     Mockito
             .when(servicio.obtenerCondicionesClimaticas("Buenos Aires"))
             .thenReturn(new EstadoDelTiempo(18, Humedad.ALTA));
